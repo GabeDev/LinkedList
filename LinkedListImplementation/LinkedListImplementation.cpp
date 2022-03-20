@@ -7,6 +7,16 @@ public:
         int value;
         Node* next;
 };
+
+void printList(Node *n)
+{
+    while (n!= NULL)
+    { 
+        //display value and traverse to next value
+        cout << n->value;
+        n = n->next;
+    }
+}
 int main()
 {
     Node* head = new Node;
@@ -21,5 +31,6 @@ int main()
     third->value = 3;
     third->next = NULL;
 
-    //
+    //invoke printlist
+    printList(head);
 }
