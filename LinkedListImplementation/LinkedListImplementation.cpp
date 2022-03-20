@@ -5,8 +5,7 @@ class Node
 {
 public:
         int value;
-        Node* link;
-    
+        Node* next;
 };
 int main()
 {
@@ -14,5 +13,13 @@ int main()
     Node* second = new Node;
     Node* third = new Node;
 
+    //initialize each node value and linking with "next"
+    head->value = 1;
+    head->next = second;
+    second->value = 2;
+    second->next = third;
+    third->value = 3;
+    third->next = NULL;
 
+    //
 }
