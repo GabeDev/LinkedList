@@ -1,8 +1,12 @@
-
 #include <iostream>
 using namespace std;
 
+struct Node
+{
+    int value;
+    Node* link;
+};
 int main()
 {
-    std::cout << "Hello World!\n";
+
 }
