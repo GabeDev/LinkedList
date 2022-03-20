@@ -1,12 +1,18 @@
 #include <iostream>
 using namespace std;
 
-struct Node
+class Node
 {
-    int value;
-    Node* link;
+public:
+        int value;
+        Node* link;
+    
 };
 int main()
 {
+    Node* head = new Node;
+    Node* second = new Node;
+    Node* third = new Node;
+
 
 }
