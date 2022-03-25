@@ -61,6 +61,17 @@ void insertAtGivenNode(Node* previous, int Value)
     toInsert->next = previous->next;
     previous->next = toInsert;
 }
+
+void deleteAtPos(Node *toDelete)
+{
+    Node* temp = new Node;
+
+    temp = toDelete->next;
+    toDelete->value = temp->value;
+    toDelete->next = temp->next;
+    free(temp);
+
+}
 int main()
 {
     Node* head = new Node;
