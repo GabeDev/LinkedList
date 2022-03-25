@@ -86,7 +86,8 @@ int main()
     third->value = 3;
     third->next = NULL;
 
-    insertAtFront(&head, -1);
+    //insertAtFront(&head, -1);
+    deleteAtPos(second);
     //invoke printlist
     printList(head);
 
