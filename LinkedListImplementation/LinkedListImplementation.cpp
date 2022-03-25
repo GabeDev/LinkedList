@@ -13,9 +13,47 @@ void printList(Node *n)
     while (n!= NULL)
     { 
         //display value and traverse to next value
-        cout << n->value;
+        cout << n->value<<endl;
         n = n->next;
     }
+}
+void insertAtFront(Node **head,int Value)
+{
+    //create node to insert
+    Node* toInsert = new Node;
+
+    //put in front of current head
+    toInsert->value = Value;
+    toInsert->next = *head;
+
+    //update the current head to the new node
+    *head = toInsert;
+}
+void insertAtEnd(Node** head, int Value)
+{
+    //create node to insert
+    Node* toInsert = new Node;
+
+    //if empty add curernt node to make list
+    if (*head == NULL)
+    {
+        *head = toInsert;
+        return;
+    }
+    //make a pointer initialized with head to allow for traversal to the end
+    Node* last = *head;
+    //if not reached "end" then traverse
+    while (last->next != NULL)
+    {
+        last = last->next;
+    }
+    //once reached end update the last node to point to  the one to insert
+    last->next = toInsert;
+}
+
+void insertAtGivenNode(Node** head, int Value)
+{
+
 }
 int main()
 {
@@ -31,6 +69,9 @@ int main()
     third->value = 3;
     third->next = NULL;
 
+    insertAtFront(&head, -1);
     //invoke printlist
     printList(head);
+
+    
 }
