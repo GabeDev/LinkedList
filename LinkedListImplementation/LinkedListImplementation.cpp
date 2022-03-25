@@ -51,9 +51,15 @@ void insertAtEnd(Node** head, int Value)
     last->next = toInsert;
 }
 
-void insertAtGivenNode(Node** head, int Value)
+void insertAtGivenNode(Node* previous, int Value)
 {
-
+    //check if previous = null
+    if (previous == NULL)
+        cout << "cannot insert here previous cannot be null" << endl;
+    Node* toInsert = new Node;
+    toInsert->value = Value;
+    toInsert->next = previous->next;
+    previous->next = toInsert;
 }
 int main()
 {
